@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAGDE'S CAFE | Cafe Menu</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f4ed;
+            color: #34281f;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #4b3428;
+            color: #fff8ed;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: #e6d2b8;
+        }
+
+        .hero {
+            width: 100%;
+            height: 220px;
+            background:
+                linear-gradient(#0002, #0002),
+                url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=80")
+                center/cover;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 25px 18px 40px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            font-size: 1.7rem;
+            color: #4b3428;
+        }
+
+        .category {
+            margin-bottom: 35px;
+        }
+
+        .category h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #d8b990;
+            padding-bottom: 8px;
+            margin-bottom: 18px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .menu-item {
+            background: #fffdf9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px #34281f10;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .item-details {
+            padding: 14px;
+        }
+
+        .item-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .item-title h3 {
+            font-size: 1.05rem;
+        }
+
+        .price {
+            color: #956338;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .item-details p {
+            color: #76685e;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        footer {
+            text-align: center;
+            background: #4b3428;
+            color: #fff8ed;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin: 4px 0;
+        }
+
+        @media (max-width: 520px) {
+            header {
+                padding: 25px 15px;
+            }
+
+            header h1 {
+                font-size: 1.9rem;
+            }
+
+            .hero {
+                height: 170px;
+            }
+
+            .container {
+                padding: 22px 12px 30px;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .menu-item {
+                display: grid;
+                grid-template-columns: 115px minmax(0, 1fr);
+                align-items: stretch;
+            }
+
+            .menu-item img {
+                height: 100%;
+                min-height: 135px;
+            }
+
+            .item-details {
+                padding: 12px;
+            }
+
+            .item-title {
+                flex-wrap: wrap;
+                gap: 2px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>BAGDE'S CAFE</h1>
+        <p>Good coffee. Fresh bites. Happy moments.</p>
+    </header>
+
+    <div class="hero" role="img" aria-label="Cozy cafe interior"></div>
+
+    <main class="container">
+
+        <div class="intro">
+            <h2>Our Menu</h2>
+            <p>Freshly prepared, made with love.</p>
+        </div>
+
+        <!-- COFFEE -->
+        <section class="category">
+            <h2>☕ Coffee & Beverages</h2>
+
+            <div class="menu-grid">
+
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80"
+                         alt="Cappuccino coffee" loading="lazy">
+                    <div class="item-details">
+                        <div class="item-title">
+                            <h3>Cappuccino</h3>
+                            <span class="price">₹150</span>
+                        </div>
+                        <p>Espresso with silky steamed milk.</p>
+                    </div>
+                </article>
+
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80"
+                         alt="Iced coffee" loading="lazy">
+                    <div class="item-details">
+                        <div class="item-title">
+                            <h3>Iced Latte</h3>
+                            <span class="price">₹180</span>
+                        </div>
+                        <p>Chilled coffee with creamy milk.</p>
+                    </div>
+                </article>
+
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80"
+                         alt="Hot coffee" loading="lazy">
+                    <div class="item-details">
+                        <div class="item-title">
+                            <h3>Americano</h3>
+                            <span class="price">₹120</span>
+                        </div>
+                        <p>Bold espresso with hot water.</p>
+                    </div>
+                </article>
+
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=600&q=80"
+                         alt="Cold coffee drink" loading="lazy">
+                    <div class="item-details">
+                        <div class="item-title">
+                            <h3>Cold Coffee</h3>
+                            <span class="price">₹160</span>
+                        </div>
+                        <p>Refreshing, chilled coffee blend.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- FOOD -->
+        <section class="category">
+            <h2>🥪 Snacks & Bites</h2>
+
+            <div class="menu-grid">
+
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80"
+                         alt="Grilled sandwich" loading="lazy">
+                    <div class="item-details">
+                        <div class="item-title">
+                            <h3>Grilled Sandwich</h3>
+                            <span class="price">₹180</span>
+                        </div>
+                        <p>Toasted bread with fresh fillings.</p>
+                    </div>
+                </article>
+
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80"
+                         alt="Fresh pizza" loading="lazy">
+                    <div class="item-details">
+                        <div class="item-title">
+                            <h3>Classic Pizza</h3>
+                            <span class="price">₹250</span>
+                        </div>
+                        <p>Cheese, herbs and a crispy crust.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- DESSERTS -->
+        <section class="category">
+            <h2>🍰 Desserts</h2>
+
+            <div class="menu-grid">
+
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"
+                         alt="Chocolate cake" loading="lazy">
+                    <div class="item-details">
+                        <div class="item-title">
+                            <h3>Chocolate Cake</h3>
+                            <span class="price">₹190</span>
+                        </div>
+                        <p>Rich chocolate cake for sweet moments.</p>
+                    </div>
+                </article>
+
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80"
+                         alt="Fresh croissant" loading="lazy">
+                    <div class="item-details">
+                        <div class="item-title">
+                            <h3>Butter Croissant</h3>
+                            <span class="price">₹120</span>
+                        </div>
+                        <p>Golden, flaky and buttery.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>The Little Bean</h3>
+        <p>Made with love, served with a smile.</p>
+        <p>Visit us again soon!</p>
+    </footer>
+
+</body>
+</html>
